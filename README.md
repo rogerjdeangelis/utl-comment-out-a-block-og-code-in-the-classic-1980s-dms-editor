@@ -1,8 +1,11 @@
-# utl-comment-out-a-block-og-code-in-the-classic-1980s-dms-editor
-Comment out a block og code in the classic 1980s dms editor 
-    %let pgm=utl-comment-out-a-block-og-code-in-the-classic-l980s-dms-editor;
+    %let pgm=utl-comment-out-a-block-of-code-in-the-classic-l980s-dms-editor;
 
-    Comment out a block og code in the classic 1980s dms editor
+    Comment out a block of code in the classic 1980s dms editor
+
+      Two methods
+
+          1. '/*' and '*/'
+          2, '%macro skip;' and '%mend skip;'
 
     The key function is that the find command moves the cursor.
     Cursor location and cursor position no longer work?
@@ -50,6 +53,15 @@ Comment out a block og code in the classic 1980s dms editor
     00004 run;quit;
     00005 */
     00006
+
+    Command ===>
+
+    00001 %macro skip;
+    00002 data class;
+    00003  set sashelp.class;
+    00004 run;quit;
+    00005 %mend skip;
+    00006
      _ __  _ __ ___   ___ ___  ___ ___
     | `_ \| `__/ _ \ / __/ _ \/ __/ __|
     | |_) | | | (_) | (_|  __/\__ \__ \
@@ -73,3 +85,11 @@ Comment out a block og code in the classic 1980s dms editor
     00005
     00006
 
+    Command ===> c ' ' '%macro skip;';f ';' last;c ' ' '%mend skip;';
+
+    00001
+    00002 data class;
+    00003  set sashelp.class;
+    00004 run;quit;
+    00005
+    00006
