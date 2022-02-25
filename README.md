@@ -5,7 +5,7 @@
       Two methods
 
           1. '/*' and '*/'
-          2, '%macro skip;' and '%mend skip;'
+          2. '%macro skip;' and '%mend skip;'
 
     The key function is that the find command moves the cursor.
     Cursor location and cursor position no longer work?
